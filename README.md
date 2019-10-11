@@ -23,7 +23,7 @@ Client side (Using Socket.io client library)
 ```javascript
 const socket = io('http://localhost:8080')
 
-socket.emit('greeting', 'John Doe')
+socket.emit('greeting', { name: 'John Doe' })
 socket.on('greeting', (data) => {
 	console.log(data) //Hello John Doe!
 })
