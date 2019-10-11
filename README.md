@@ -127,7 +127,7 @@ const app = new App({
 })
 ```
 
-# The `ctx` Object
+# The `ctx` object
 - **socket**: The connected socket
 - **path**: The request path
 - **body**: The request body
