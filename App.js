@@ -6,10 +6,7 @@ const Router = require('./Router')
 
 class App extends Router {
 	/**
-	 * @param {{
-	 * 	httpsOptions: https.ServerOptions,
-	 * 	public: string
-	 * }} options
+	 * @param {{httpsOptions: https.ServerOptions, public: string}} options
 	 */
 	constructor(options = {}) {
 		super()
@@ -55,7 +52,6 @@ class App extends Router {
 	on(path, ...middlewares) {
 		switch (path) {
 			case 'connect':
-			case 'connection':
 				this._onConnect = (socket) => {
 					if (middlewares[0]) {
 						middlewares[0]({ socket })

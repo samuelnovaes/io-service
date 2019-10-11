@@ -17,7 +17,7 @@ class Router {
 					}
 				}
 				else {
-					middleware({ socket, path: packet[0], body: packet[1], next })
+					middleware({ socket, path: packet[0], body: packet[1], packet, next })
 				}
 			})
 		}
